@@ -1,0 +1,145 @@
+.date-scroll {
+  font-family: "DynaPuff";
+  align-items: center;
+  font-weight: normal;
+  font-size: 1.625em;
+  color: $light-brown;
+  width: inherit;
+
+  h1 {
+    font-size: 1.625em;
+    color: $red;
+    padding-bottom: 32px;
+  }
+
+  .day-container {
+    flex: 1 0 0;
+    padding: 0 20px;
+    width: 100%;
+
+    a:hover {
+      color: $red;
+      opacity: 100%;
+    }
+
+    .dates {
+      opacity: 30%;
+      font-weight: 400;
+      flex-grow: 1;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+  }
+
+  img {
+    opacity: 100%;
+  }
+
+  span {
+    font-size: 0.5em;
+  }
+
+  .scroll-left {
+    height: 11px;
+  }
+  .scroll-right {
+    rotate: 180deg;
+    float: right;
+  }
+  .scroll-right:hover {
+    filter: opacity(100%) saturate(100%) invert(18%) sepia(31%) saturate(7468%) hue-rotate(327deg) brightness(100%);
+    opacity: 100%;
+  }
+}
+
+.background {
+  //   width: 100%;
+  background-color: white;
+  filter: $drop-shadow-1;
+  padding: 30px 80px 34px 80px;
+
+  .date-scroll-schedule {
+    font-family: "DynaPuff";
+    align-items: center;
+    font-weight: normal;
+    font-size: 1.625em;
+    color: $light-brown;
+
+    h1 {
+      font-size: 26px;
+      color: $red;
+      padding-bottom: 32px;
+      text-transform: uppercase;
+    }
+
+    .day-container {
+      flex: 1 0 0;
+      padding: 0 20px;
+      width: 100%;
+
+      a:hover {
+        color: $red;
+        opacity: 100%;
+      }
+
+      .dates {
+        opacity: 30%;
+        font-weight: 400;
+        flex-grow: 1;
+      }
+
+      a {
+        font-size: 30px;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    img {
+      opacity: 100%;
+    }
+
+    span {
+      font-size: 0.5em;
+    }
+
+    .scroll-left {
+      height: 11px;
+    }
+    .scroll-right {
+      rotate: 180deg;
+      float: right;
+    }
+    .scroll-right:hover {
+      filter: opacity(100%) saturate(100%) invert(18%) sepia(31%) saturate(7468%) hue-rotate(327deg) brightness(100%);
+      opacity: 100%;
+    }
+  }
+}
+
+// -------------------Media Queries
+@media screen and (max-width: 500px) {
+  .date-scroll,
+  .date-scroll-schedule {
+    section {
+      padding-bottom: 33px;
+    }
+    .day-container {
+      .dates {
+        font-size: 26px;
+
+        span {
+          font-size: 0.45em;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .background {
+    padding: 0;
+    filter: drop-shadow(0px 4px 3px rgba(45, 45, 45, 0.107843));
+  }
+}

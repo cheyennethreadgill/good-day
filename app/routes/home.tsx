@@ -1,13 +1,40 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { useState, useEffect } from "react";
+import { Header } from "../Components/Header/Header";
+import { DayDropdowns } from "../Components/Header/DayDropdowns";
+// import TaskContainer from "../Components/Tasks/TasksContainer";
+import type { json } from "stream/consumers";
+import { Nav } from "~/Components/Nav";
+import { useWindowSize } from "~/hooks/useWindowResize";
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+  return [{ title: "Good Day!" }, { name: "description", content: "Welcome to Good Day The Auto Scheduler =)!" }];
 }
 
 export default function Home() {
-  return <Welcome />;
+  // Top Level State
+  const [clicked, setClicked] = useState(false);
+  const handleTimeClick = () => {
+    setClicked(!clicked);
+  };
+
+  const { isMobile, windowSize } = useWindowSize();
+
+  return (
+    <>
+      <Nav
+        isMobile={isMobile}
+        windowSize={windowSize}
+      />
+      <Header
+        isMobile={isMobile}
+        dateScrollShown={true}
+        page="Home"
+      />
+      <DayDropdowns
+        clicked={clicked}
+        handleTimeClick={handleTimeClick}
+      />
+    </>
+  );
 }

@@ -1,0 +1,43 @@
+.date-container {
+  .header-month {
+    font-family: "DynaPuff";
+    display: flex;
+    justify-content: end;
+
+    .month-head {
+      padding-bottom: 23px;
+      color: white;
+      width: 100%;
+
+      .flex {
+        gap: 27px;
+        justify-content: space-between;
+      }
+
+      span {
+        text-align: center;
+        width: 11.375rem;
+        height: 1.4375rem;
+        font-size: 0.875rem;
+        font-weight: bold;
+        background-color: $red;
+        border-radius: 7px;
+        flex-grow: 1;
+      }
+
+      img {
+        width: 1.3125em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .date-container {
+    flex-grow: 1;
+
+    .header-month {
+      width: 100%;
+    }
+  }
+}

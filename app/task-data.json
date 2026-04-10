@@ -1,0 +1,53 @@
+[
+  {
+    "id": 0,
+    "title": "Dog walk",
+    "timeOfDay": "Morning",
+    "taskDuration": "15 min",
+    "time": "1:00",
+    "priority": "high",
+    "tags": "leisure",
+    "color": "red"
+  },
+  {
+    "id": 1,
+    "title": "Study",
+    "timeOfDay": "Morning",
+    "taskDuration": "1 hr",
+    "time": "9:15am",
+    "priority": "medium",
+    "tags": "leisure",
+    "color": "orange"
+  },
+
+  {
+    "id": 2,
+    "title": "Study",
+    "timeOfDay": "Evening",
+    "taskDuration": "1 hr",
+    "time": "9:15am",
+    "priority": "medium",
+    "tags": "leisure",
+    "color": "orange"
+  },
+  {
+    "id": 3,
+    "title": "Read a book",
+    "timeOfDay": "Afternoon",
+    "taskDuration": "30 min",
+    "time": "12:15pm",
+    "priority": "low",
+    "tags": "leisure",
+    "color": "green"
+  },
+  {
+    "id": 4,
+    "title": "Read a book",
+    "timeOfDay": "Afternoon",
+    "taskDuration": "30 min",
+    "time": "12:15pm",
+    "priority": "low",
+    "tags": "leisure",
+    "color": "green"
+  }
+]

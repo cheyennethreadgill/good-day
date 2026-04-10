@@ -1,0 +1,76 @@
+.day-dropdown-menu-container {
+  padding: 0;
+}
+.day-dropdowns {
+  justify-content: space-between;
+  font-family: "DynaPuff", "Arial";
+  font-weight: 600;
+  letter-spacing: 10%;
+  padding: 0 80px 0px 80px;
+  filter: $drop-shadow-1;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+
+  .day-container {
+    height: 62px;
+  }
+  &::after {
+    background-color: $light-grey;
+  }
+
+  .times {
+    // display: flex;
+    position: relative;
+    border-bottom: solid 2.2px $lighter-grey;
+    padding: 0 0 11px 0;
+
+    &::before {
+      content: "";
+      background-image: url("../../../public/Mobile-edit-task-priority-icon.svg");
+      width: 18px;
+      height: 18px;
+      margin-top: 10px;
+      display: inline-block;
+
+      padding-top: 3px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      transform: rotate(-90deg);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .day-decor {
+      content: "";
+      background-color: transparent;
+      height: 30px;
+      width: 50px;
+      display: inline-block;
+
+      align-content: center;
+      margin-bottom: 6px;
+      border-bottom: 2px dashed $brown;
+      margin-left: 10px;
+    }
+  }
+}
+
+// -----Media Queries
+// phone screens
+@media screen and (max-width: 500px) {
+  .day-dropdowns {
+    height: 80vh;
+    background-color: $light-grey;
+    padding: 25px 29px;
+
+    .day-container {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}

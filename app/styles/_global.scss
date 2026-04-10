@@ -1,0 +1,117 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  &:-webkit-any-link {
+    color: inherit;
+  }
+}
+body {
+  font-family: "Acumin";
+  margin: 0 auto;
+}
+
+section {
+  padding: 100px 80px 0 80px;
+}
+.container {
+  padding-left: 44px;
+}
+
+// _------------------SIZING
+.m-0 {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-end {
+  justify-content: end;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.position-relative {
+  position: relative;
+}
+.position-sticky {
+  position: sticky;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.active {
+  opacity: 100%;
+}
+.inactive {
+  opacity: 30%;
+}
+.active-red {
+  color: $red;
+}
+.active-brown {
+  color: $dark-brown;
+}
+.inactive-brown {
+  opacity: 30%;
+}
+
+.green {
+  color: $green;
+  // filter: brightness(0) saturate(100%) invert(78%) sepia(55%) saturate(445%) hue-rotate(41deg) brightness(100%)
+  //   contrast(92%);
+  border-color: $green;
+}
+.red {
+  color: $red;
+  // filter: brightness(0) saturate(100%) invert(17%) sepia(96%) saturate(7073%) hue-rotate(337deg) brightness(89%)
+  //   contrast(99%);
+  border-color: $red;
+}
+.orange {
+  color: $orange;
+  // filter: brightness(0) saturate(100%) invert(49%) sepia(56%) saturate(1993%) hue-rotate(340deg) brightness(104%)
+  //   contrast(101%);
+}
+
+// ------------------------------------------------------Media Queries
+// phone screens
+@media screen and (max-width: 500px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  header,
+  section {
+    display: block;
+    // padding: 37px 29px;
+    margin: 0 auto;
+  }
+  .container {
+    padding: 0;
+  }
+}

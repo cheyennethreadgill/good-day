@@ -1,0 +1,76 @@
+header {
+  // padding: 135px 80px 0 80px;
+  // border-bottom: solid 3px $lighter-grey;
+
+  #main-header {
+    height: 231px;
+
+    .header-text {
+      opacity: 73%;
+      h1 {
+        font-family: "DynaPuff";
+        font-size: 1.875em;
+      }
+      p {
+        font-stretch: condensed;
+      }
+      span {
+        font-family: "acumin";
+        font-weight: normal;
+        font-stretch: condensed;
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------Media Queries
+// phone screens
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 20px;
+  }
+
+  .header-container {
+    header {
+      #main-header {
+        height: max-content;
+        justify-content: center;
+        margin: 39px 29px 33px 29px;
+        align-items: center;
+        width: none;
+
+        .header-text {
+          display: none;
+        }
+        // .date-container {
+        //   flex-grow: 1;
+        // }
+
+        .header-month {
+          .month-head {
+            span {
+              width: 17.375rem;
+              height: 2.1875rem;
+              order: 1;
+              font-size: 0.875em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop Screens
+@media screen and (min-width: 900px) {
+  .header-container {
+    header {
+      #main-header {
+        padding: 67px 80px 0 80px;
+      }
+      .h-120 {
+        height: 120px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "timeOfDay": "Morning"
+  },
+  {
+    "id": 1,
+    "timeOfDay": "Afternoon"
+  },
+  {
+    "id": 2,
+    "timeOfDay": "Evening"
+  }
+]

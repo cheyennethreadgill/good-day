@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Calendar from "react-calendar";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/cjs/Form.js";
+import Button from "react-bootstrap/cjs/Button.js";
 import { Dropdown } from "../Dropdown";
 
 import { useWindowSize } from "~/hooks/useWindowResize";

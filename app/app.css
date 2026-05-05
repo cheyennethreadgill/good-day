@@ -665,7 +665,7 @@ header #main-header .header-text span {
 }
 .day-dropdowns .day-drop-icon {
   content: "";
-  background-image: url("../../../public/Mobile-edit-task-priority-icon.svg");
+  background-image: url("public/Mobile-edit-task-priority-icon.svg");
   width: 18px;
   height: 18px;
   margin-top: 10px;
@@ -943,7 +943,7 @@ header #main-header .header-text span {
   cursor: pointer;
 }
 .add-task-modal-icon {
-  content: url("../../../public/desktop-add-task-icon.svg");
+  content: url("public/desktop-add-task-icon.svg");
   position: absolute;
   left: -47px;
 }

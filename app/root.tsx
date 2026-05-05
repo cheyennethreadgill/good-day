@@ -1,7 +1,9 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
+import { useEffect } from "react";
 
 import type { Route } from "./+types/root";
 import favicon from "public/favicon.svg";
+import { createContext, useContext } from "react";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -48,8 +50,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+// const defaultType : calendarContextValues {
+//   logWorking: ()=> void,
+// }
+
+// export const calendarContext = createContext<calendarContextType>(defaultContextType);
+
+function logWorking(): string {
+  const message = "log working";
+  return message;
+}
+
 export default function App() {
-  return <Outlet />;
+  useEffect(() => {
+    if (localStorage) {
+      console.log(localStorage);
+      window.localStorage.removeItem("Select Option");
+    }
+  }, []);
+  return <Outlet context={logWorking} />;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

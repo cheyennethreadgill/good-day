@@ -1,14 +1,24 @@
 import { NavLink } from "react-router";
 import logo from "../../public/LOGO.svg";
 import home from "../../public/mobile nav home icon.svg";
-import schedule from "../../public/nav calendar icon.svg";
+import schedule from "../../public/nav-calendar-icon.svg";
 import mobileSchedule from "../../public/Mobile nav schedule icon.svg";
 import addTaskIcon from "../../public/desktop nav task icon.svg";
 import mobileAddTaskIcon from "../../public/Mobile nav add task icon.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactPromise } from "react";
 import { useWindowSize } from "~/hooks/useWindowResize";
 
-export function Nav({ isMobile, windowSize }: { isMobile: boolean; windowSize: number }) {
+export function Nav({
+  isMobile,
+  windowSize,
+  setTaskClicked,
+  taskClicked,
+}: {
+  isMobile: boolean;
+  windowSize: number;
+  setTaskClicked: Function;
+  taskClicked: boolean;
+}) {
   const navLinks = [{ icon: schedule, title: "Schedule" }];
   const navLinksMobile = [
     { id: "one", icon: home, title: "Home", slug: "/" },
@@ -41,8 +51,16 @@ export function Nav({ isMobile, windowSize }: { isMobile: boolean; windowSize: n
                   const { icon, title, id, slug } = link;
                   return (
                     <NavLink
+                      onClick={
+                        slug === "add-new-task"
+                          ? () => {
+                              setTaskClicked(!taskClicked);
+                              console.log("nav add task clicked");
+                            }
+                          : null
+                      }
                       key={title}
-                      to={slug}
+                      to={slug === "add-new-task" ? "" : slug}
                       className={id}
                     >
                       <img
@@ -103,6 +121,7 @@ export function Nav({ isMobile, windowSize }: { isMobile: boolean; windowSize: n
         </div>
         {!isMobile && navClicked ? (
           <img
+            onClick={() => setTaskClicked(!taskClicked)}
             className="add-task-icon"
             src={addTaskIcon}
             alt=""

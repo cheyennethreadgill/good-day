@@ -1,0 +1,76 @@
+.react-calendar-container {
+  position: absolute;
+  right: 95px;
+  top: 440px;
+  z-index: 1000;
+  width: 329.84px;
+  height: 273.02px;
+}
+
+.react-calendar {
+  font-family: "Acumin", "Arial", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 10px 0;
+  padding: 18px 15px;
+  border-radius: 20px;
+  // height: inherit;
+  z-index: 100;
+
+  button {
+    font-weight: 600;
+    font-stretch: condensed;
+  }
+  &__viewContainer {
+    padding: 0 22px;
+  }
+
+  &__navigation {
+    width: 100%;
+
+    &__label {
+      font-family: "DynaPuff", Courier, monospace;
+      font-size: 18px;
+      font-weight: 600;
+      color: $red;
+    }
+  }
+
+  &__month-view__weekdays {
+    font-weight: 200;
+    font-size: 12px;
+    color: rgba(128, 128, 128, 0.702);
+  }
+
+  &__tile--active {
+    background: $red2;
+  }
+  &__tile--now {
+    background: $red;
+    color: white;
+    border-radius: 600px;
+    width: 20px;
+    height: 43px;
+
+    &:hover {
+      background: $red2;
+    }
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+}
+
+.react-calendar-container-head {
+  right: 75px;
+  top: 91px;
+}
+
+@media screen and (max-width: 500px) {
+  .react-calendar-container-head {
+    right: 31px;
+  }
+}

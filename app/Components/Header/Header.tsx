@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DateScroll from "./Date/DateScroll";
 import DatesHeader from "./Date/DatesHeader";
+import Calendar from "react-calendar";
 
 export function Header({
   options,
@@ -28,7 +29,7 @@ export function Header({
             </div>
           ) : null}
           {page === "Home" ? (
-            <div className="date-container">
+            <div className="date-container ">
               <DatesHeader
                 options={options}
                 page="Home"
@@ -42,7 +43,7 @@ export function Header({
             </div>
           ) : (
             <>
-              <div className="date-container">
+              <div className="date-container ">
                 <DatesHeader
                   options={options}
                   page="Schedule"

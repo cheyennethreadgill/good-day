@@ -1,41 +1,16 @@
-import tagIcon from "../../../public/task-tag-home.svg";
-import taskData from "../../task-data.json";
+import { useState } from "react";
+import TaskItem from "./TaskItem";
 
-export default function Task() {
+export default function Task({ filteredTasks }) {
   return (
     <>
-      {taskData.map((task) => {
+      {filteredTasks.map((ime: {}) => {
+        const { task } = ime;
         return (
-          <div className="flex task-flex">
-            <input
-              type="checkbox"
-              name="Task Checkbox"
-              id="task-checkbox"
-              className={`${task.color}`}
-            />
-            <div
-              id="task"
-              className="flex"
-            >
-              <div className="task-text">
-                <p className="task-times">
-                  {task.time} ● {task.taskDuration}
-                </p>
-                <h3 className={`task-title ${task.color}`}>{task.title}</h3>
-              </div>
-
-              <div className={`priority-gauge-${task.priority}`}>
-                <span className="one"></span>
-                <span className="two"></span>
-                <span className="three"></span>
-              </div>
-
-              <img
-                src={tagIcon}
-                className={`task-tags ${task.color}`}
-              ></img>
-            </div>
-          </div>
+          <TaskItem
+            key={task.id}
+            task={task}
+          />
         );
       })}
     </>

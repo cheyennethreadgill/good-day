@@ -1,3 +1,14 @@
+// select component---
+.css-bz1shz-indicatorContainer {
+  justify-content: center;
+}
+.css-13198h3-control:focus-visible {
+  outline: none;
+  border: none;
+  appearance: none;
+}
+
+// Day Dropdown Menu titles component---
 .day-dropdown-menu-container {
   padding: 0;
 }
@@ -11,35 +22,67 @@
   position: relative;
   z-index: 1;
   background-color: white;
+  display: flex;
+
+  .Morning,
+  .Afternoon,
+  .Evening {
+    position: relative;
+    z-index: 2;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
   .day-container {
     height: 62px;
+    flex: 0 0 220px;
+    position: relative;
+    z-index: 2;
+
+    .day-container-header {
+      position: relative;
+      z-index: 2;
+    }
   }
   &::after {
     background-color: $light-grey;
   }
 
+  .day-drop-icon {
+    content: "";
+    background-image: url("../../../public/Mobile-edit-task-priority-icon.svg");
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+    display: inline-block;
+    padding-top: 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(-90deg);
+  }
+  .day-drop-icon-active {
+    content: "";
+    background-image: url("../../../public/Mobile-edit-task-priority-icon.svg");
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+    display: inline-block;
+    padding-top: 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(0deg);
+  }
+
   .times {
-    // display: flex;
     position: relative;
-    border-bottom: solid 2.2px $lighter-grey;
+
     padding: 0 0 11px 0;
-
-    &::before {
-      content: "";
-      background-image: url("../../../public/Mobile-edit-task-priority-icon.svg");
-      width: 18px;
-      height: 18px;
-      margin-top: 10px;
-      display: inline-block;
-
-      padding-top: 3px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-
-      transform: rotate(-90deg);
-    }
 
     &:hover {
       cursor: pointer;
@@ -68,9 +111,18 @@
     background-color: $light-grey;
     padding: 25px 29px;
 
+    .container {
+      flex-direction: column;
+    }
+
     .day-container {
+      height: max-content;
       flex-direction: column;
       justify-content: space-around;
+
+      .times {
+        border-bottom: solid 2.2px $lighter-grey;
+      }
     }
   }
 }

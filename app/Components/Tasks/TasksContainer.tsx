@@ -1,11 +1,10 @@
 import Task from "./Task";
+import { useState } from "react";
 
-export default function TaskContainer() {
+export default function TaskContainer({ filteredTasks }) {
   return (
-    <div className="container">
-      <section className="task-container">
-        <Task />
-      </section>
-    </div>
+    <section className="task-container">
+      <Task filteredTasks={filteredTasks} />
+    </section>
   );
 }

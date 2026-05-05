@@ -1,11 +1,55 @@
+.task {
+  position: relative;
+
+  // .order-3 {
+  //   width: 100%;
+  //   height: 100%;
+  // }
+
+  .task-option-popup {
+    background-color: white;
+    color: $dark-brown;
+    filter: $drop-shadow-2;
+    width: 168px;
+    height: 140px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    top: 25px;
+    z-index: 2000;
+    border-radius: 6px;
+  }
+
+  .options-icon-container {
+    width: 100%;
+    height: 100%;
+    gap: 2px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .optionsIcon {
+      background-color: red;
+      width: 6px;
+      height: 5.5px;
+      margin-bottom: 57px;
+      border-radius: 100px;
+      z-index: 2000;
+    }
+  }
+}
 .task-container {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  grid-auto-rows: auto;
-  padding-top: 54px;
-  width: inherit;
+  height: 71vh;
+  display: flex;
+  flex-direction: column;
+  padding: 43px 0px 0px 0px;
   row-gap: 28px;
-  column-gap: 21px;
+  top: 0;
+  left: 0;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scrollbar-color: #ff000000 #ffa50000;
 
   // animations
   // margin-top: -110px;\
@@ -25,7 +69,6 @@
     width: 24px;
     height: 24px;
     border: 6px solid;
-    background: white;
     border-radius: 50px;
     cursor: pointer;
 
@@ -42,13 +85,12 @@
 }
 
 #task {
-  // margin-top: 2px; //start transition
-  // margin-top: 93px; //end transition
-
-  filter: $drop-shadow-2;
+  // filter: $drop-shadow-2;
+  filter: none;
 
   width: 300px;
-  height: 80px;
+  // height: 80px;
+  height: max-content;
   border-radius: $small-radius;
 
   padding: 26px 31px;
@@ -171,7 +213,7 @@
 // phone screens
 @media screen and (max-width: 500px) {
   .task-container {
-    position: absolute;
+    // position: absolute;
     grid-template-columns: 1fr;
     padding: 0;
   }

@@ -32,6 +32,16 @@
   },
   {
     "id": 3,
+    "title": "Go for a run",
+    "timeOfDay": "Afternoon",
+    "taskDuration": "30 min",
+    "time": "3:45pm",
+    "priority": "low",
+    "tags": "leisure",
+    "color": "green"
+  },
+  {
+    "id": 4,
     "title": "Read a book",
     "timeOfDay": "Afternoon",
     "taskDuration": "30 min",
@@ -41,9 +51,59 @@
     "color": "green"
   },
   {
-    "id": 4,
-    "title": "Read a book",
-    "timeOfDay": "Afternoon",
+    "id": 5,
+    "title": "Cook Dinner",
+    "timeOfDay": "Morning",
+    "taskDuration": "30 min",
+    "time": "12:15pm",
+    "priority": "medium",
+    "tags": "leisure",
+    "color": "orange"
+  },
+  {
+    "id": 6,
+    "title": "Draw in sketchbook",
+    "timeOfDay": "Morning",
+    "taskDuration": "30 min",
+    "time": "12:15pm",
+    "priority": "medium",
+    "tags": "leisure",
+    "color": "orange"
+  },
+  {
+    "id": 7,
+    "title": "Watch a movie with my dearest :)",
+    "timeOfDay": "Morning",
+    "taskDuration": "30 min",
+    "time": "12:15pm",
+    "priority": "low",
+    "tags": "leisure",
+    "color": "green"
+  },
+  {
+    "id": 8,
+    "title": "Watch a movie with my dearest :)",
+    "timeOfDay": "Morning",
+    "taskDuration": "30 min",
+    "time": "12:15pm",
+    "priority": "low",
+    "tags": "leisure",
+    "color": "green"
+  },
+  {
+    "id": 9,
+    "title": "Watch a movie with my dearest :)",
+    "timeOfDay": "Morning",
+    "taskDuration": "30 min",
+    "time": "12:15pm",
+    "priority": "low",
+    "tags": "leisure",
+    "color": "green"
+  },
+  {
+    "id": 10,
+    "title": "Watch a movie with my dearest :)",
+    "timeOfDay": "Morning",
     "taskDuration": "30 min",
     "time": "12:15pm",
     "priority": "low",

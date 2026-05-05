@@ -1,0 +1,217 @@
+.add-task-modal {
+  position: absolute;
+  width: 500px;
+  height: 100vh;
+  background-color: $red;
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  color: white;
+  margin: 0 auto;
+  padding: 0 8%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  filter: $drop-shadow-4;
+  transform: translateX(105.6vw);
+  transition: all cubic-bezier(0.17, 0.13, 0, 1) 500ms;
+  cursor: pointer;
+
+  &-icon {
+    content: url("../../../public/desktop-add-task-icon.svg");
+    position: absolute;
+    left: -47px;
+  }
+
+  .form-container {
+    margin-top: 50px;
+  }
+
+  h2 {
+    margin-bottom: 62px;
+    letter-spacing: 15%;
+  }
+
+  &-form-groups {
+    gap: 14px;
+    width: 280px;
+    align-items: self-end;
+  }
+
+  form {
+    label {
+      font-size: 16px;
+      font-weight: 600;
+      font-stretch: semi-condensed;
+      margin-right: 14px;
+    }
+    .form-group {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+
+      // &:nth-child(3) {
+      //   div {
+      //     flex: 1 0 auto;
+      //   }
+      // }
+
+      input {
+        height: 35px;
+        width: 190px;
+        border: none;
+        border-radius: 6px;
+        // flex: 1 0 auto;
+
+        font-family: "DynaPuff", "Arial", sans-serif;
+        font-weight: bold;
+        color: $red2;
+        text-align: center;
+
+        &::placeholder {
+          font-family: "DynaPuff", "Arial", sans-serif;
+          font-weight: bold;
+          color: $red2;
+          text-align: center;
+          opacity: 50%;
+        }
+
+        &:focus-visible {
+          outline: 5px solid $red2;
+        }
+      }
+    }
+    .due-date-group {
+      position: relative;
+
+      .due-date-calendar-icon {
+        content: url("../../../public/nav-calendar-icon.svg");
+        width: 21px;
+        position: absolute;
+        right: -46px;
+        top: 8px;
+      }
+    }
+  }
+  button {
+    height: 59.78px;
+    width: 100%;
+    font-family: "DynaPuff", "Arial", sans-serif;
+    font-weight: bold;
+    color: $red;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 152px;
+
+    &:hover {
+      color: white;
+      background-color: $red;
+      cursor: pointer;
+      outline: 6px solid $red2;
+    }
+  }
+  .tag-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-right: 35px;
+  }
+}
+.modal-slide-desktop {
+  transition: all cubic-bezier(0.17, 0.13, 0, 1) 500ms;
+  transform: translateX(75.6vw);
+}
+
+@media screen and (max-width: 1600px) {
+  .modal-slide-desktop {
+    transform: translateX(67.5vw);
+  }
+}
+@media screen and (max-width: 500px) {
+  .add-task-modal-container {
+    .react-calendar-container {
+      position: absolute;
+      right: 59px;
+      top: 540px;
+      width: 314px;
+      height: 261px;
+    }
+  }
+
+  .add-task-modal {
+    position: absolute;
+    width: 107.179vw;
+    height: 70.64vh;
+    background-color: #e30547;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+    margin: 0 auto;
+    padding-top: 75px;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 0;
+    filter: drop-shadow(-3px -1px 2.5px rgba(92, 4, 35, 0.4392156863));
+    cursor: pointer;
+
+    bottom: -73px;
+    left: 50%;
+    transform: translate(-50%, 477px);
+    transition: all ease-in-out 350ms;
+
+    display: block;
+
+    &-icon {
+      width: 91px;
+      top: -27px;
+      transform: translateX(180%);
+      left: 0;
+    }
+
+    .form-container {
+      margin: 0 0 0 20px;
+    }
+    h2 {
+      margin-bottom: 27px;
+      font-size: 22px;
+    }
+
+    form {
+      .due-date:after {
+        right: -35px;
+      }
+      .form-group {
+        label {
+          margin-right: 22px;
+        }
+        input {
+          height: 28px;
+          width: 173px;
+
+          &::placeholder {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    button {
+      margin-top: 48px;
+      height: 57px;
+    }
+  }
+  .modal-slide-mobile {
+    z-index: 100;
+    transition: all ease-in-out 350ms;
+    transform: translate(-50%, 0px);
+    display: block;
+  }
+}

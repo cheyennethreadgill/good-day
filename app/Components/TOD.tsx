@@ -1,41 +1,33 @@
 import timeJson from "../TOD.json";
 import taskData from "../task-data.json";
+import TaskContainer from "./Tasks/TasksContainer";
+import TODCOLS from "./TODCOLS";
 
-export default function TOD({ clicked, handleTimeClick }) {
-  const timeOfDayfromJSON = timeJson.map((obj) => {
-    const { timeOfDay } = obj;
-    return timeOfDay;
-  });
-
+export default function TOD({ id, clicked, handleTimeClick, filteredTasks, tod, ti }) {
   // filter tasks based on each timeOfDay
 
-  // const filteredTaskTimes = taskData.filter(CheckTaskTimeOfDay);
-
-  // function CheckTaskTimeOfDay() {
-  //   taskData.map((task) => {
-  //     const { timeOfDay } = task;
-
-  //     if (timeOfDay === "Morning") {
-  //       return task;
-  //     }
-  //   });
-  // }
-
-  // console.log(filteredTaskTimes);
-
   return (
-    <div className="day-container flex space-between">
-      {timeOfDayfromJSON.map((time) => {
-        return (
+    <>
+      {/* {ti == tod && ( */}
+      <div className={`${tod} day-container `}>
+        <div
+          className="day-container-header"
+          onClick={() => {
+            handleTimeClick(tod, tod);
+          }}
+        >
           <p
-            key={time}
-            onClick={() => handleTimeClick()}
-            className={clicked ? `${time} active-brown times` : `${time} inactive-brown times`}
+            key={id}
+            className={ti === tod && clicked ? ` active-brown times` : `inactive-brown times`}
           >
-            {time} (2) <span className="day-decor"></span>
+            <span className={ti === tod && clicked ? ` day-drop-icon-active` : `day-drop-icon`}></span>
+            {tod} (2) <span className="day-decor"></span>
           </p>
-        );
-      })}
-    </div>
+        </div>
+
+        {ti === tod && clicked && <TaskContainer filteredTasks={filteredTasks} />}
+      </div>
+      {/* )} */}
+    </>
   );
 }

@@ -18,21 +18,23 @@
 //stretch
 
 // colors
-$lighter-brown: #8a6571;
+$lighter-brown: #8a6571a8;
 $light-brown: #5c0423;
 $brown: #5c0423;
 $dark-brown: #5c0423;
 $red: #e30547;
+$red2: #e5668c;
 
 $grey: #dfdfdf79;
+$lightest-grey: #f7f5f5;
 $lighter-grey: rgba(128, 128, 128, 0.183);
 $light-grey: #f7f5f5;
 $grey: #2d2d2d;
 
-$green: #a0ec61;
+$green: #7adc2a;
 $orange: #ff6e30;
 $orange-low: #ff6e30c6;
-$task-text: #F8F8F8;
+$task-text: #f8f8f8;
 
 // sizes
 $h1: 1.875em; //30px
@@ -45,6 +47,7 @@ $drop-shadow-1: drop-shadow(0px 1px 2px rgba(45, 45, 45, 0.2078431373));
 
 $drop-shadow-2: drop-shadow(0px 2px 2.8px #00000034);
 $drop-shadow-3: drop-shadow(0px 7px 4px #5c042374);
+$drop-shadow-4: drop-shadow(-3px -1px 2.5px #5c042370);
 
 // -----------------------------------STATES
 

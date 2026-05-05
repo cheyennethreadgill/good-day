@@ -6,7 +6,7 @@ import TOD from "../TOD";
 import timeJson from "../../TOD.json";
 import taskData from "../../task-data.json";
 
-export function DayDropdowns({ clicked, handleTimeClick }) {
+export function DayDropdowns({ clicked, handleTimeClick, filteredTasks, ti }) {
   // INSTRUCTIONS: For each time of day...
   // ---we want to load all tasks with this time of day when clicked
 
@@ -37,18 +37,44 @@ export function DayDropdowns({ clicked, handleTimeClick }) {
   //   });
   // }
 
+  function showTaskcontainers(val) {
+    //   const returnedTaskContainer = filteredTasks.map((obj) => {
+    //     if (obj.task["timeOfDay"] === tod) {
+    //       return <TaskContainer filteredTasks={filteredTasks} />;
+    //     } else return;
+    //   }
+    // );
+    for (const timeOfDay in filteredTasks) {
+      if (timeOfDay === val) return <TaskContainer filteredTasks={filteredTasks} />;
+    }
+
+    // return returnedTaskContainer();
+  }
+  // const timeOfDayfromJSON = timeJson.map((obj) => {
+  //   const { id, timeOfDay } = obj;
+  //   return { id, timeOfDay };
+  // });
+
   return (
     <section className="day-dropdown-menu-container">
       <div className="day-dropdowns ">
         <div className="container">
-          <TOD
-            clicked={clicked}
-            handleTimeClick={handleTimeClick}
-          />
+          {" "}
+          {timeJson.map((time) => {
+            return (
+              <TOD
+                key={time.id}
+                clicked={clicked}
+                handleTimeClick={handleTimeClick}
+                filteredTasks={filteredTasks}
+                tod={time.timeOfDay}
+                ti={ti}
+                // tod={filteredTasks["timeOfDay"]}
+              />
+            );
+          })}
         </div>
       </div>
-
-      {clicked && <TaskContainer />}
     </section>
   );
 }

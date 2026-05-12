@@ -62,52 +62,12 @@
   },
   {
     "id": 6,
-    "title": "Draw in sketchbook",
+    "title": "Draw for 30 minutes",
     "timeOfDay": "Morning",
     "taskDuration": "30 min",
     "time": "12:15pm",
     "priority": "medium",
     "tags": "leisure",
     "color": "orange"
-  },
-  {
-    "id": 7,
-    "title": "Watch a movie with my dearest :)",
-    "timeOfDay": "Morning",
-    "taskDuration": "30 min",
-    "time": "12:15pm",
-    "priority": "low",
-    "tags": "leisure",
-    "color": "green"
-  },
-  {
-    "id": 8,
-    "title": "Watch a movie with my dearest :)",
-    "timeOfDay": "Morning",
-    "taskDuration": "30 min",
-    "time": "12:15pm",
-    "priority": "low",
-    "tags": "leisure",
-    "color": "green"
-  },
-  {
-    "id": 9,
-    "title": "Watch a movie with my dearest :)",
-    "timeOfDay": "Morning",
-    "taskDuration": "30 min",
-    "time": "12:15pm",
-    "priority": "low",
-    "tags": "leisure",
-    "color": "green"
-  },
-  {
-    "id": 10,
-    "title": "Watch a movie with my dearest :)",
-    "timeOfDay": "Morning",
-    "taskDuration": "30 min",
-    "time": "12:15pm",
-    "priority": "low",
-    "tags": "leisure",
-    "color": "green"
   }
 ]

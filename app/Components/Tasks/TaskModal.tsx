@@ -63,7 +63,7 @@ export default function TaskModal({
                     <Form.Label>Duration</Form.Label>
                     <Form.Control
                       type="input"
-                      placeholder="Enter name of task..."
+                      placeholder="Select duration"
                     />
                   </Form.Group>
                   <Form.Group
@@ -87,7 +87,7 @@ export default function TaskModal({
                     <Form.Control
                       type="input"
                       className=""
-                      placeholder="Enter name of task..."
+                      placeholder="Choose a date"
                     />
                     <span
                       onClick={() => {
@@ -103,7 +103,7 @@ export default function TaskModal({
                     <Form.Label>Preferred Time</Form.Label>
                     <Form.Control
                       type="input"
-                      placeholder="Enter name of task..."
+                      placeholder="Choose a time"
                     />
                   </Form.Group>
                   <Form.Group

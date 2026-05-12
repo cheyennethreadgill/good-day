@@ -21,7 +21,7 @@
   cursor: pointer;
 
   &-icon {
-    content: url("../../../public/desktop-add-task-icon.svg");
+    content: url("/desktop-add-task-icon.svg");
     position: absolute;
     left: -47px;
   }
@@ -89,7 +89,7 @@
       position: relative;
 
       .due-date-calendar-icon {
-        content: url("../../../public/nav-calendar-icon.svg");
+        content: url("/nav-calendar-icon.svg");
         width: 21px;
         position: absolute;
         right: -46px;

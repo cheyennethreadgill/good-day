@@ -1,10 +1,10 @@
 import { NavLink } from "react-router";
-import logo from "../../public/LOGO.svg";
-import home from "../../public/mobile nav home icon.svg";
-import schedule from "../../public/nav-calendar-icon.svg";
-import mobileSchedule from "../../public/Mobile nav schedule icon.svg";
-import addTaskIcon from "../../public/desktop nav task icon.svg";
-import mobileAddTaskIcon from "../../public/Mobile nav add task icon.svg";
+const logo = "/LOGO.svg";
+const home = "/mobile nav home icon.svg";
+const schedule = "/nav-calendar-icon.svg";
+const mobileSchedule = "/Mobile nav schedule icon.svg";
+const addTaskIcon = "/desktop nav task icon.svg";
+const mobileAddTaskIcon = "/Mobile nav add task icon.svg";
 import { useEffect, useState, type ReactPromise } from "react";
 import { useWindowSize } from "~/hooks/useWindowResize";
 

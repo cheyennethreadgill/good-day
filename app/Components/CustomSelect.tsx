@@ -1,5 +1,5 @@
 import { components } from "react-select";
-import dropdownIcon from "../../public/Day Change dropdown icon.svg";
+const dropdownIcon = "/Day Change dropdown icon.svg";
 
 const CustomDropdownIndicator = (props) => (
   <components.DropdownIndicator {...props}>

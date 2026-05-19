@@ -665,7 +665,7 @@ header #main-header .header-text span {
 }
 .day-dropdowns .day-drop-icon {
   content: "";
-  background-image: url("public/Mobile-edit-task-priority-icon.svg");
+  background-image: url("/Mobile-edit-task-priority-icon.svg");
   width: 18px;
   height: 18px;
   margin-top: 10px;
@@ -678,7 +678,7 @@ header #main-header .header-text span {
 }
 .day-dropdowns .day-drop-icon-active {
   content: "";
-  background-image: url("../../../public/Mobile-edit-task-priority-icon.svg");
+  background-image: url("/Mobile-edit-task-priority-icon.svg");
   width: 18px;
   height: 18px;
   margin-top: 10px;
@@ -688,6 +688,9 @@ header #main-header .header-text span {
   background-repeat: no-repeat;
   background-position: center center;
   transform: rotate(0deg);
+}
+.day-dropdowns .test {
+  color: red;
 }
 .day-dropdowns .times {
   position: relative;
@@ -943,7 +946,7 @@ header #main-header .header-text span {
   cursor: pointer;
 }
 .add-task-modal-icon {
-  content: url("public/desktop-add-task-icon.svg");
+  content: url("/desktop-add-task-icon.svg");
   position: absolute;
   left: -47px;
 }
@@ -1002,7 +1005,7 @@ header #main-header .header-text span {
   position: relative;
 }
 .add-task-modal form .due-date-group .due-date-calendar-icon {
-  content: url("../../../public/nav-calendar-icon.svg");
+  content: url("/nav-calendar-icon.svg");
   width: 21px;
   position: absolute;
   right: -46px;

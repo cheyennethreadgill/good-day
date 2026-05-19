@@ -1,4 +1,4 @@
-import scrollIcon from "../../../../public/date-scroll-icon.svg";
+const scrollIcon = "/date-scroll-icon.svg";
 
 export default function DateScroll({ page, isMobile }: { page: string; isMobile: boolean }) {
   return (

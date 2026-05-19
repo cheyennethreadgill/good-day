@@ -20,7 +20,7 @@ export default function TOD({ id, clicked, handleTimeClick, filteredTasks, tod, 
             key={id}
             className={ti === tod && clicked ? ` active-brown times` : `inactive-brown times`}
           >
-            <span className={ti === tod && clicked ? ` day-drop-icon-active` : `day-drop-icon`}></span>
+            <span className={ti === tod && clicked ? `day-drop-icon-active` : `day-drop-icon`}></span>
             {tod} (2) <span className="day-decor"></span>
           </p>
         </div>

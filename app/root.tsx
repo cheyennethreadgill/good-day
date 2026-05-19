@@ -2,7 +2,7 @@ import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration }
 import { useEffect } from "react";
 
 import type { Route } from "./+types/root";
-import favicon from "public/favicon.svg";
+const favicon = "/favicon.svg";
 import { createContext, useContext } from "react";
 import "./app.css";
 

@@ -1,11 +1,11 @@
-import scheduleIcon from "../../../../public/calendar-icon.svg";
+const scheduleIcon = "/calendar-icon.svg";
 import DateScroll from "./DateScroll";
 import DayChange from "~/Components/DayChange";
 import { useState } from "react";
 import Calendar from "react-calendar";
 
-import previousIcon from "../../../../public/Previous Icon.svg";
-import nextIcon from "../../../../public/Next Icon.svg";
+const previousIcon = "/Previous Icon.svg";
+const nextIcon = "/Next Icon.svg";
 
 import { useWindowSize } from "~/hooks/useWindowResize";
 

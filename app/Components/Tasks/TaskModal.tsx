@@ -6,12 +6,12 @@ import { Dropdown } from "../Dropdown";
 
 import { useWindowSize } from "~/hooks/useWindowResize";
 
-import weightIcon from "../../../public/weight icon.svg";
-import leisureIcon from "../../../public/bag icon.svg";
-import homeIcon from "../../../public/task-tag-home.svg";
-import addTaskModalIcon from "../../../public/desktop-add-task-icon.svg";
-import previousIcon from "../../../public/Previous Icon.svg";
-import nextIcon from "../../../public/Next Icon.svg";
+const weightIcon = "/weight icon.svg";
+const leisureIcon = "/bag icon.svg";
+const homeIcon = "/task-tag-home.svg";
+const addTaskModalIcon = "/desktop-add-task-icon.svg";
+const previousIcon = "/Previous Icon.svg";
+const nextIcon = "/Next Icon.svg";
 
 export default function TaskModal({
   page,

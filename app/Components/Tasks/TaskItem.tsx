@@ -1,5 +1,5 @@
 import { useState } from "react";
-import tagIcon from "../../../public/task-tag-home.svg";
+const tagIcon = "/task-tag-home.svg";
 import taskData from "../../task-data.json";
 import { Dropdown } from "../Dropdown";
 import { ScheduleContext } from "~/routes/Schedule";
